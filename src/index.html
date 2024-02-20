@@ -15,7 +15,7 @@
   </head>
   <body>
     <header
-      class="container sticky left-0 top-0 z-50 bg-light-violet md:relative md:bg-primary"
+      class="sticky top-0 z-50 bg-light-violet 2xl:container md:relative md:bg-primary"
       id="home"
     >
       <nav class="flex items-center justify-between p-5 md:px-20">
@@ -57,7 +57,7 @@
     </header>
 
     <!-- mobile nav -->
-    <nav class="fixed z-30 h-dvh w-full bg-grey pt-10">
+    <nav class="fixed z-30 hidden h-dvh w-full bg-grey pt-10 md:hidden">
       <div
         class="mx-auto flex max-w-[330px] flex-col gap-5 rounded-[10px] border bg-light-violet py-20 text-center text-primary shadow-2xl shadow-dark"
       >
@@ -74,7 +74,7 @@
 
     <main class="overflow-hidden">
       <!-- HERO -->
-      <section class="container px-5 py-32 text-center">
+      <section class="px-5 py-32 text-center 2xl:container">
         <div class="relative inline-block text-center md:text-left">
           <div
             class="absolute -left-14 -top-20 -z-20 h-[119.85px] w-[142px] bg-iconOne-mobile md:-left-56 md:top-32 md:h-[197.85px] md:w-[224.98px] md:bg-iconOne-desktop"
@@ -111,13 +111,13 @@
 
       <!-- TODO: make this moving icons of general skills -->
       <!-- skills icons -->
-      <section class="container h-16 bg-dark">
+      <section class="h-16 bg-dark 2xl:container">
         <h1 class=""></h1>
       </section>
 
       <!-- ABOUT -->
       <section
-        class="container flex flex-col items-center justify-center gap-10 bg-grey px-5 md:flex-row md:py-10"
+        class="flex flex-col items-center justify-center gap-10 bg-grey px-5 2xl:container md:flex-row md:py-10"
         id="about"
       >
         <div class="pt-14 text-justify md:w-[524px] md:flex-initial md:pt-0">
@@ -152,7 +152,7 @@
 
       <!-- SKILLS -->
       <section
-        class="container bg-light-violet px-5 py-16 text-primary"
+        class="bg-light-violet px-5 py-16 text-primary 2xl:container"
         id="expertise"
       >
         <div class="pb-8 text-center">
@@ -207,7 +207,7 @@
 
       <!-- WORKS -->
 
-      <section class="container bg-grey px-0 py-16 md:relative" id="works">
+      <section class="bg-grey px-0 py-16 2xl:container md:relative" id="works">
         <div class="pl-5 lg:pl-24">
           <p class="font-sora text-18 text-violet">WORKS</p>
           <h2 class="pb-10 pt-5 font-sora text-32">
@@ -256,7 +256,7 @@
       </section>
 
       <section
-        class="container hidden h-16 items-center justify-center bg-dark md:flex"
+        class="hidden h-16 items-center justify-center bg-dark 2xl:container md:flex"
       >
         <div class="space-x-5 font-sora text-18 text-primary md:flex">
           <a
@@ -283,7 +283,10 @@
       </section>
     </main>
 
-    <footer class="container bg-light-violet px-5 py-16 lg:px-24" id="contact">
+    <footer
+      class="bg-light-violet px-5 py-16 2xl:container lg:px-24"
+      id="contact"
+    >
       <div class="md:flex md:items-center md:gap-10">
         <div class="flex-auto text-primary md:w-[524px]">
           <p class="font-sora text-18 text-grey">CONTACT</p>

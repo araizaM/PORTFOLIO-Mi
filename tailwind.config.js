@@ -2,11 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    screen: {
+    screens: {
       sm: "576px",
       md: "768px",
       lg: "992px",
       xl: "1200px",
+      "2xl": "1400px",
     },
     fontSize: {
       16: "16px",
@@ -40,10 +41,10 @@ module.exports = {
 
     extend: {
       backgroundImage: {
-        "iconOne-mobile": "url('src/assets/icon1-mobile.png')",
-        "iconOne-desktop": "url('src/assets/icon1-desktop.png')",
-        "iconTwo-mobile": "url('src/assets/icon2-mobile.png')",
-        "iconTwo-desktop": "url('src/assets/icon2-desktop.png')",
+        "iconOne-mobile": "url('/src/assets/icon1-mobile.png')",
+        "iconOne-desktop": "url('/src/assets/icon1-desktop.png')",
+        "iconTwo-mobile": "url('/src/assets/icon2-mobile.png')",
+        "iconTwo-desktop": "url('/src/assets/icon2-desktop.png')",
       },
     },
   },
