@@ -41,10 +41,10 @@ module.exports = {
 
     extend: {
       backgroundImage: {
-        "iconOne-mobile": "url('/src/assets/icon1-mobile.png')",
-        "iconOne-desktop": "url('/src/assets/icon1-desktop.png')",
-        "iconTwo-mobile": "url('/src/assets/icon2-mobile.png')",
-        "iconTwo-desktop": "url('/src/assets/icon2-desktop.png')",
+        "iconOne-mobile": "url('../assets/icon1-mobile.png')",
+        "iconOne-desktop": "url('../assets/icon1-desktop.png')",
+        "iconTwo-mobile": "url('../assets/icon2-mobile.png')",
+        "iconTwo-desktop": "url('../assets/icon2-desktop.png')",
       },
     },
   },

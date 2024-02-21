@@ -889,6 +889,11 @@ html {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.border-violet{
+  --tw-border-opacity: 1;
+  border-color: rgb(50 39 63 / var(--tw-border-opacity));
+}
+
 .bg-css{
   --tw-bg-opacity: 1;
   background-color: rgb(146 125 227 / var(--tw-bg-opacity));
@@ -925,11 +930,11 @@ html {
 }
 
 .bg-iconOne-mobile{
-  background-image: url('/src/assets/icon1-mobile.png');
+  background-image: url('../assets/icon1-mobile.png');
 }
 
 .bg-iconTwo-mobile{
-  background-image: url('/src/assets/icon2-mobile.png');
+  background-image: url('../assets/icon2-mobile.png');
 }
 
 .p-5{
@@ -1310,11 +1315,11 @@ html {
   }
 
   .md\:bg-iconOne-desktop{
-    background-image: url('/src/assets/icon1-desktop.png');
+    background-image: url('../assets/icon1-desktop.png');
   }
 
   .md\:bg-iconTwo-desktop{
-    background-image: url('/src/assets/icon2-desktop.png');
+    background-image: url('../assets/icon2-desktop.png');
   }
 
   .md\:p-0{
