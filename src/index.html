@@ -16,7 +16,7 @@
   <body>
     <header
       class="sticky top-0 z-50 bg-light-violet 2xl:container md:relative md:bg-primary"
-      id="home"
+      id="home-desktop"
     >
       <nav class="flex items-center justify-between p-5 md:px-20">
         <div>
@@ -48,7 +48,7 @@
             >Download CV</a
           >
         </div>
-        <div class="space-y-1 md:hidden">
+        <div class="space-y-1 md:hidden" id="mobile-menu">
           <div class="h-1 w-5 rounded-full bg-primary"></div>
           <div class="h-1 w-5 rounded-full bg-primary"></div>
           <div class="h-1 w-5 rounded-full bg-primary"></div>
@@ -57,24 +57,28 @@
     </header>
 
     <!-- mobile nav -->
-    <nav class="fixed z-30 hidden h-dvh w-full bg-grey pt-10 md:hidden">
+    <nav
+      class="fixed z-30 hidden h-dvh w-full bg-grey pt-10 md:hidden"
+      id="mobile-nav"
+    >
       <div
         class="mx-auto flex max-w-[330px] flex-col gap-5 rounded-[10px] border bg-light-violet py-20 text-center text-primary shadow-2xl shadow-dark"
       >
-        <a href="#about" class="active:text-violet">Home</a>
-        <a href="#about" class="active:text-violet">About</a>
-        <a href="#expertise" class="active:text-violet">Expertise</a>
-        <a
-          href="#works"
-          class="navbar-hover hover:after:bg-dark active:text-violet"
-          >Works</a
+        <a href="#home" class="active:text-violet" id="mobile-link">Home</a>
+        <a href="#about" class="active:text-violet" id="mobile-link">About</a>
+        <a href="#expertise" class="active:text-violet" id="mobile-link"
+          >Expertise</a
+        >
+        <a href="#works" class="active:text-violet" id="mobile-link">Works</a>
+        <a href="#contact" class="active:text-violet" id="mobile-link"
+          >Contact</a
         >
       </div>
     </nav>
 
     <main class="overflow-hidden">
       <!-- HERO -->
-      <section class="px-5 py-32 text-center 2xl:container">
+      <section class="px-5 py-32 text-center 2xl:container" id="home">
         <div class="relative inline-block text-center md:text-left">
           <div
             class="absolute -left-14 -top-20 -z-20 h-[119.85px] w-[142px] bg-iconOne-mobile md:-left-56 md:top-32 md:h-[197.85px] md:w-[224.98px] md:bg-iconOne-desktop"
@@ -260,7 +264,7 @@
       >
         <div class="space-x-5 font-sora text-18 text-primary md:flex">
           <a
-            href="#home"
+            href="#home-desktop"
             class="navbar-hover hover:after:top-6 hover:after:mb-2 hover:after:bg-primary active:text-grey active:after:bg-grey"
             >Home</a
           >
@@ -363,4 +367,5 @@
       </div>
     </footer>
   </body>
+  <script src="js/script.js"></script>
 </html>
