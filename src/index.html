@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>tailwind</title>
+    <title>araizaMi-Portfolio</title>
     <link rel="stylesheet" href="css/main.css" />
     <link
       rel="stylesheet"
@@ -48,17 +48,20 @@
             >Download CV</a
           >
         </div>
-        <div class="cursor-pointer space-y-1 md:hidden" id="mobile-menu">
+        <div
+          class="cursor-pointer space-y-1 transition duration-100 md:hidden"
+          id="mobile-menu"
+        >
           <div
-            class="h-1 w-5 rounded-full bg-primary"
+            class="trn h-1 w-5 rounded-full bg-primary"
             id="mobile-menu-item"
           ></div>
           <div
-            class="h-1 w-5 rounded-full bg-primary"
+            class="trn h-1 w-5 rounded-full bg-primary"
             id="mobile-menu-item"
           ></div>
           <div
-            class="h-1 w-5 rounded-full bg-primary"
+            class="trn h-1 w-5 rounded-full bg-primary"
             id="mobile-menu-item"
           ></div>
         </div>
@@ -122,10 +125,57 @@
         </div>
       </section>
 
-      <!-- TODO: make this moving icons of general skills -->
       <!-- skills icons -->
-      <section class="h-16 bg-dark 2xl:container">
-        <h1 class=""></h1>
+      <section class="h-16 gap-48 bg-dark 2xl:container">
+        <div
+          class="blurry relative mx-auto flex h-full max-w-[768px] items-center overflow-hidden"
+        >
+          <div class="animate-scrolling flex">
+            <div class="flex min-w-[768px] justify-between">
+              <span class="text-40 text-grey"
+                ><i class="fa-brands fa-html5"></i
+              ></span>
+              <span class="text-40 text-grey"
+                ><i class="fa-brands fa-css3-alt"></i
+              ></span>
+              <span class="text-40 text-grey"
+                ><i class="fa-brands fa-square-js"></i
+              ></span>
+              <img
+                src="assets/tailwind-logo.svg"
+                alt="tailwind"
+                width="50px"
+                height="50px"
+              />
+              <span class="text-40 text-grey"
+                ><i class="fa-brands fa-sass"></i
+              ></span>
+            </div>
+          </div>
+          <!-- duplicated -->
+          <div class="animate-scrolling ml-36 flex">
+            <div class="flex min-w-[768px] justify-between">
+              <span class="text-40 text-grey"
+                ><i class="fa-brands fa-html5"></i
+              ></span>
+              <span class="text-40 text-grey"
+                ><i class="fa-brands fa-css3-alt"></i
+              ></span>
+              <span class="text-40 text-grey"
+                ><i class="fa-brands fa-square-js"></i
+              ></span>
+              <img
+                src="assets/tailwind-logo.svg"
+                alt="tailwind"
+                width="50px"
+                height="50px"
+              />
+              <span class="text-40 text-grey"
+                ><i class="fa-brands fa-sass"></i
+              ></span>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- ABOUT -->
@@ -233,40 +283,22 @@
           </h2>
         </div>
 
-        <!-- TODO: make the button function next to project and previous to project and also make this part dynamic-->
-        <div class="flex flex-row gap-5 overflow-scroll pl-5 md:pl-24">
-          <div>
-            <div
-              class="min-h-[514px] min-w-[300px] rounded-[10px] bg-light-violet md:min-w-[522px]"
-            ></div>
-            <p class="pt-3 font-sora text-18 font-semibold text-dark">
-              Project Title
-            </p>
-          </div>
-
-          <div>
-            <div
-              class="min-h-[514px] min-w-[300px] rounded-[10px] bg-light-violet md:min-w-[522px]"
-            ></div>
-            <p class="pt-3 font-sora text-18 font-semibold text-dark">
-              Project Title
-            </p>
-          </div>
-          <div>
-            <div
-              class="min-h-[514px] min-w-[300px] rounded-[10px] bg-light-violet md:min-w-[522px]"
-            ></div>
-            <p class="pt-3 font-sora text-18 font-semibold text-dark">
-              Project Title
-            </p>
-          </div>
+        <div
+          class="flex snap-x flex-row gap-5 overflow-hidden pl-5 md:pl-24"
+          id="project-container"
+        >
+          <!-- project goes here from javascript -->
         </div>
 
         <div class="right-0 top-16 inline-flex gap-5 px-5 pt-10 md:absolute">
-          <span class="rounded-full bg-dark px-5 py-4 text-primary"
+          <span
+            class="cursor-pointer rounded-full bg-primary px-5 py-4 text-dark hover:bg-dark hover:text-primary active:scale-75"
+            id="prev"
             ><i class="fa-solid fa-chevron-left"></i
           ></span>
-          <span class="rounded-full bg-dark px-5 py-4 text-primary"
+          <span
+            class="cursor-pointer rounded-full bg-primary px-5 py-4 text-dark hover:bg-dark hover:text-primary active:scale-75"
+            id="next"
             ><i class="fa-solid fa-chevron-right"></i
           ></span>
         </div>

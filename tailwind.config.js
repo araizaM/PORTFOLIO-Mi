@@ -2,13 +2,13 @@
 module.exports = {
   content: ["src/**/*.{html,js}"],
   theme: {
-    // screens: {
-    //   sm: "576px",
-    //   md: "768px",
-    //   lg: "992px",
-    //   xl: "1200px",
-    //   "2xl": "1400px",
-    // },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
     fontSize: {
       16: "16px",
       18: "18px",
@@ -45,6 +45,28 @@ module.exports = {
         "iconOne-desktop": "url('../assets/icon1-desktop.png')",
         "iconTwo-mobile": "url('../assets/icon2-mobile.png')",
         "iconTwo-desktop": "url('../assets/icon2-desktop.png')",
+      },
+      keyframes: {
+        scrolling: {
+          "0%": {
+            transform: "translateX(0px)",
+          },
+          "100%": {
+            transform: "translateX(-119%)",
+          },
+          // menuDown: {
+          //   "0%": {
+          //     height: "2vh",
+          //   },
+          //   "100%": {
+          //     height: "100vh",
+          //   },
+          // },
+        },
+      },
+      animation: {
+        scrolling: "scrolling 10s linear infinite",
+        // menuDown: "menuDown 100s linear forwards",
       },
     },
   },
