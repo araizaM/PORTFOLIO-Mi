@@ -49,9 +49,18 @@
           >
         </div>
         <div class="cursor-pointer space-y-1 md:hidden" id="mobile-menu">
-          <div class="h-1 w-5 rounded-full bg-primary"></div>
-          <div class="h-1 w-5 rounded-full bg-primary"></div>
-          <div class="h-1 w-5 rounded-full bg-primary"></div>
+          <div
+            class="h-1 w-5 rounded-full bg-primary"
+            id="mobile-menu-item"
+          ></div>
+          <div
+            class="h-1 w-5 rounded-full bg-primary"
+            id="mobile-menu-item"
+          ></div>
+          <div
+            class="h-1 w-5 rounded-full bg-primary"
+            id="mobile-menu-item"
+          ></div>
         </div>
       </nav>
     </header>
@@ -124,7 +133,7 @@
         class="flex flex-col items-center justify-center gap-10 bg-grey px-5 2xl:container md:flex-row md:py-10"
         id="about"
       >
-        <div class="pt-14 text-justify md:w-[524px] md:flex-initial md:pt-0">
+        <div class="max-w-[524px] flex-1 pt-14 text-justify md:pt-0">
           <p class="font-sora text-18 text-violet">ABOUT ME</p>
           <h2 class="py-5 font-sora text-32 md:text-40">
             An Aspiring<br />
@@ -140,16 +149,20 @@
             happen on the web!
           </p>
         </div>
-        <div class="pb-16 md:w-[524px] md:flex-initial md:pb-0">
+        <div class="max-w-[524px] flex-1 pb-16 md:pb-0">
           <img
-            class="mx-auto bg-primary md:border lg:hidden"
+            class="mx-auto border bg-primary lg:hidden"
             src="assets/profile-mobile.png"
             alt="profile"
+            width="100%"
+            height="100%"
           />
           <img
-            class="mx-auto hidden bg-primary md:border lg:block"
+            class="mx-auto hidden border bg-primary lg:block"
             src="assets/profile-desktop.png"
             alt="profile"
+            width="100%"
+            height="100%"
           />
         </div>
       </section>
@@ -292,7 +305,7 @@
       id="contact"
     >
       <div class="md:flex md:items-center md:gap-10">
-        <div class="flex-auto text-primary md:w-[524px]">
+        <section class="flex-1 text-primary">
           <p class="font-sora text-18 text-grey">CONTACT</p>
           <h2 class="pb-10 pt-5 font-sora text-32">
             You can send me a <br />message here.
@@ -303,10 +316,8 @@
             meaningful conversations. Your thoughts and inquiries are always
             welcomed, and I look forward to hearing from you!
           </p>
-        </div>
-        <form
-          class="flex max-w-[335px] flex-auto flex-col gap-2 pt-10 text-primary md:w-[524px]"
-        >
+        </section>
+        <form class="flex flex-1 flex-col gap-2 pt-10 text-primary">
           <label class="text-18 font-semibold">Name</label>
           <input
             class="border border-primary bg-light-violet px-2 py-3 font-thin focus:outline-none"
@@ -319,16 +330,16 @@
           <input
             class="border border-primary bg-light-violet px-2 py-3 font-thin focus:outline-none"
             type="text"
-            name="name"
-            id="name"
+            name="surname"
+            id="surname"
             required
           />
           <label class="text-18 font-semibold">Email</label>
           <input
             class="border border-primary bg-light-violet px-2 py-3 font-thin focus:outline-none"
-            type="text"
-            name="name"
-            id="name"
+            type="email"
+            name="email"
+            id="email"
             required
           />
 

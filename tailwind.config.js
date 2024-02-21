@@ -2,13 +2,13 @@
 module.exports = {
   content: ["src/**/*.{html,js}"],
   theme: {
-    screens: {
-      sm: "576px",
-      md: "768px",
-      lg: "992px",
-      xl: "1200px",
-      "2xl": "1400px",
-    },
+    // screens: {
+    //   sm: "576px",
+    //   md: "768px",
+    //   lg: "992px",
+    //   xl: "1200px",
+    //   "2xl": "1400px",
+    // },
     fontSize: {
       16: "16px",
       18: "18px",
