@@ -21,25 +21,28 @@ function toggleMenuBar() {
   });
 }
 function changeMenuIcon() {
+  let firstBar = mobileNavItem[0];
+  let lastBar = mobileNavItem[2];
+
   if (
-    mobileNavItem[0].classList.contains(translatePos) &&
-    mobileNavItem[0].classList.contains(rotatePos)
+    firstBar.classList.contains(translatePos) &&
+    firstBar.classList.contains(rotatePos)
   ) {
-    mobileNavItem[0].classList.remove(translatePos);
-    mobileNavItem[0].classList.remove(rotatePos);
+    firstBar.classList.remove(translatePos);
+    firstBar.classList.remove(rotatePos);
   } else {
-    mobileNavItem[0].classList.add(translatePos);
-    mobileNavItem[0].classList.add(rotatePos);
+    firstBar.classList.add(translatePos);
+    firstBar.classList.add(rotatePos);
   }
   if (
-    mobileNavItem[2].classList.contains(translateNeg) &&
-    mobileNavItem[2].classList.contains(rotateNeg)
+    lastBar.classList.contains(translateNeg) &&
+    lastBar.classList.contains(rotateNeg)
   ) {
-    mobileNavItem[2].classList.remove(translateNeg);
-    mobileNavItem[2].classList.remove(rotateNeg);
+    lastBar.classList.remove(translateNeg);
+    lastBar.classList.remove(rotateNeg);
   } else {
-    mobileNavItem[2].classList.add(translateNeg);
-    mobileNavItem[2].classList.add(rotateNeg);
+    lastBar.classList.add(translateNeg);
+    lastBar.classList.add(rotateNeg);
   }
 }
 
@@ -56,61 +59,141 @@ mobileLink.forEach((element) => {
   });
 });
 
-//make this object not counter
-let numProject = 10;
-let projectName = "Project Tittle";
-// let currentProject = 1;
+const projectList = [
+  {
+    title: "in-progress",
+    imgPath: "assets/icon1-desktop.png",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum minus deserunt at illum atque blanditiis temporibus ratione quibusdam voluptates corporis amet aut illo doloribus repellat facilis aliquid saepe, autem quos.",
+  },
+  {
+    title: "in-progress",
+    imgPath: "assets/icon2-desktop.png",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum minus deserunt at illum atque blanditiis temporibus ratione quibusdam voluptates corporis amet aut illo doloribus repellat facilis aliquid saepe, autem quos.",
+  },
+  {
+    title: "in-progress",
+    imgPath: "assets/icon1-desktop.png",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum minus deserunt at illum atque blanditiis temporibus ratione quibusdam voluptates corporis amet aut illo doloribus repellat facilis aliquid saepe, autem quos.",
+  },
+  {
+    title: "in-progress",
+    imgPath: "assets/icon2-desktop.png",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum minus deserunt at illum atque blanditiis temporibus ratione quibusdam voluptates corporis amet aut illo doloribus repellat facilis aliquid saepe, autem quos.",
+  },
+  {
+    title: "in-progress",
+    imgPath: "assets/icon1-desktop.png",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum minus deserunt at illum atque blanditiis temporibus ratione quibusdam voluptates corporis amet aut illo doloribus repellat facilis aliquid saepe, autem quos.",
+  },
+];
+
+let numProject = projectList.length;
 let section;
+let div;
+let divContent;
+let p;
 
 for (i = 1; i <= numProject; i++) {
   section = projectContainer.appendChild(document.createElement("section"));
-  let div = section.appendChild(document.createElement("div"));
+  div = section.appendChild(document.createElement("div"));
+  p = section.appendChild(document.createElement("p"));
+  div.setAttribute("id", "project");
+  p.setAttribute("id", "projectTitle");
   div.classList.add(
     "min-h-[514px]",
     "min-w-[300px]",
     "rounded-[10px]",
-    "bg-light-violet",
+    "bg-dark-grey",
+    "border",
     "md:min-w-[522px]",
+    "lg:min-w-[440px]",
+    "bg-contain",
+    "bg-no-repeat",
+    "bg-center",
+    "p-10",
   );
-  div.setAttribute("id", "project");
-  let p = section.appendChild(document.createElement("p"));
+
   p.classList.add("pt-3", "font-sora", "text-18", "font-semibold", "text-dark");
-  p.textContent = projectName;
+  p.textContent = "...";
+
+  // temporay
+
+  divContent = div.appendChild(document.createElement("div"));
+
+  divContent.classList.add(
+    "w-full",
+    "h-[250px]",
+    "bg-grey",
+    "relative",
+    "rounded-md",
+    "after:rounded-full",
+    "after:absolute",
+    "after:top-[270px]",
+    "after:w-[100%]",
+    "after:h-[10px]",
+    "after:bg-grey",
+    "before:rounded-full",
+    "before:absolute",
+    "before:top-[300px]",
+    "before:w-[200px]",
+    "before:h-[10px]",
+    "before:bg-grey",
+    "animate-pulse",
+  );
 }
-// let projectWidth = section.firstElementChild.offsetWidth;
 
-// let project = document.querySelectorAll("#project");
-// project[0].classList.add("opacity-20");
+let pElemCounter = 0;
+let titleCounter = 0;
 
-// next.addEventListener("click", () => {
-//   projectContainer.scrollLeft =
-//     projectContainer.scrollWidth / 2 - projectContainer.clientWidth / 2;
+p = document.querySelectorAll("#projectTitle").forEach((elem, index) => {
+  if (index == pElemCounter) {
+    elem.textContent = projectList[titleCounter].title;
+    pElemCounter++;
+    titleCounter++;
+  }
+});
 
-//   if (currentProject >= numProject) {
-//     currentProject = 1;
-//     projectContainer.scrollLeft = 0;
-//   } else {
-//     currentProject++;
+let count = 0;
+let counter = 0;
+
+// div = document.querySelectorAll("#project").forEach((elem, index) => {
+//   if (index == count) {
+//     elem.style.add;
+//     elem.style.backgroundImage = `url(${projectList[counter].imgPath})`;
+//     count++;
+//     counter++;
 //   }
-//   console.log(currentProject + "next");
-//   project.forEach((elem) => {
-//     elem.classList.remove("opacity-20");
-//     project[currentProject - 1].classList.add("opacity-20");
-//   });
 // });
-// prev.addEventListener("click", () => {
-//   projectContainer.scrollLeft =
-//     projectContainer.scrollWidth / 2 - projectContainer.clientWidth / 2;
-//   if (currentProject <= 1) {
-//     currentProject = numProject;
-//     projectContainer.scrollLeft =
-//       projectContainer.scrollWidth - projectContainer.clientWidth;
-//   } else {
-//     currentProject--;
-//   }
-//   console.log(currentProject + "prev");
-//   project.forEach((elem) => {
-//     elem.classList.remove("opacity-20");
-//     project[currentProject - 1].classList.add("opacity-20");
-//   });
-// });
+
+let projectWidth = section.firstElementChild.offsetWidth;
+let projectGap = 20;
+
+let project = document.querySelectorAll("#project");
+// let firstProject = project[0];
+// let lastProject = project[project.length - 1];
+// firstProject.classList.add("opacity-20");
+
+next.addEventListener("click", () => {
+  if (window.innerWidth <= 768) {
+    projectContainer.scrollLeft += projectWidth + projectGap;
+  } else if (window.innerWidth <= 1280) {
+    projectContainer.scrollLeft += projectWidth * 2 + projectGap * 2;
+  } else if (window.innerWidth <= 1536 || window.innerWidth > 1536) {
+    projectContainer.scrollLeft += projectWidth * 3 + projectGap * 3;
+  }
+});
+
+prev.addEventListener("click", () => {
+  if (window.innerWidth <= 768) {
+    projectContainer.scrollLeft -= projectWidth + projectGap;
+  } else if (window.innerWidth <= 1280) {
+    projectContainer.scrollLeft -= projectWidth * 2 + projectGap * 2;
+  } else if (window.innerWidth <= 1536 || window.innerWidth > 1536) {
+    projectContainer.scrollLeft -= projectWidth * 3 + projectGap * 3;
+  }
+});

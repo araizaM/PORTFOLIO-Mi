@@ -15,7 +15,7 @@
     @apply rounded-full bg-dark px-5 py-3 font-sora font-thin text-primary text-18
   }
   .button-hover{
-    @apply hover:bg-gradient-to-r from-violet to-dark active:scale-90 transition duration-200 ease-in
+    @apply hover:bg-gradient-to-r from-light-violet to-dark active:scale-90 transition duration-200 ease-in
   }
   .navbar-hover{
     @apply relative hover:after:absolute hover:after:h-1 after:rounded-full hover:after:w-full hover:after:top-8 hover:after:left-0 active:text-light-violet
@@ -30,7 +30,4 @@
     @apply before:bg-dark before:absolute before:top-0 before:bottom-0 before:-left-4 before:w-10 before:blur-sm
     after:bg-dark after:absolute after:top-0 after:bottom-0 after:-right-4 after:w-10  after:blur-sm before:z-10 after:z-10
   }
-  /* .trn{
-    @apply transition-all duration-200
-  } */
 }

@@ -5,7 +5,7 @@ module.exports = {
     screens: {
       sm: "640px",
       md: "768px",
-      lg: "1024",
+      lg: "1024px",
       xl: "1280px",
       "2xl": "1536px",
     },
@@ -27,6 +27,7 @@ module.exports = {
       violet: "#32273F",
       dark: "#1B1B1B",
       grey: "#D9D9D9",
+      "dark-grey": "#424242",
       html: "#D2FF85",
       css: "#927DE3",
       js: "#FFD885",
@@ -40,6 +41,9 @@ module.exports = {
     },
 
     extend: {
+      boxShadow: {
+        noBlurShadow: "10px 10px 0px -1px rgba(232,232,232,1);",
+      },
       backgroundImage: {
         "iconOne-mobile": "url('../assets/icon1-mobile.png')",
         "iconOne-desktop": "url('../assets/icon1-desktop.png')",
