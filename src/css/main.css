@@ -754,6 +754,14 @@ html {
   margin-top: 1.25rem;
 }
 
+.mt-8{
+  margin-top: 2rem;
+}
+
+.block{
+  display: block;
+}
+
 .inline-block{
   display: inline-block;
 }
@@ -844,6 +852,14 @@ html {
 
 .max-w-\[768px\]{
   max-width: 768px;
+}
+
+.max-w-\[100px\]{
+  max-width: 100px;
+}
+
+.max-w-\[200px\]{
+  max-width: 200px;
 }
 
 .flex-1{

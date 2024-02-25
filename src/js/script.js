@@ -147,26 +147,23 @@ for (i = 1; i <= numProject; i++) {
   );
 }
 
-let pElemCounter = 0;
-let titleCounter = 0;
-
+let pCounter = 0;
+let pIndex = 0;
 p = document.querySelectorAll("#projectTitle").forEach((elem, index) => {
-  if (index == pElemCounter) {
-    elem.textContent = projectList[titleCounter].title;
-    pElemCounter++;
-    titleCounter++;
+  if (index == pCounter) {
+    elem.textContent = projectList[pIndex].title;
+    pCounter++;
+    pIndex++;
   }
 });
 
-let count = 0;
-let counter = 0;
-
+// let divCounter = 0;
+// let divIndex = 0;
 // div = document.querySelectorAll("#project").forEach((elem, index) => {
-//   if (index == count) {
-//     elem.style.add;
-//     elem.style.backgroundImage = `url(${projectList[counter].imgPath})`;
-//     count++;
-//     counter++;
+//   if (index == divCounter) {
+//     elem.style.backgroundImage = `url(${projectList[divIndex].imgPath})`;
+//     divCounter++;
+//     divIndex++;
 //   }
 // });
 
@@ -174,9 +171,6 @@ let projectWidth = section.firstElementChild.offsetWidth;
 let projectGap = 20;
 
 let project = document.querySelectorAll("#project");
-// let firstProject = project[0];
-// let lastProject = project[project.length - 1];
-// firstProject.classList.add("opacity-20");
 
 next.addEventListener("click", () => {
   if (window.innerWidth <= 768) {

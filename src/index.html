@@ -21,6 +21,7 @@
       <nav class="flex items-center justify-between p-5 md:px-20">
         <div>
           <a
+            href="#home"
             class="cursor-pointer font-sora text-18 font-thin text-primary md:text-dark"
           >
             Micko<span class="font-bold text-violet">Araiza</span>
@@ -73,7 +74,7 @@
 
     <!-- mobile nav -->
     <nav
-      class="fixed z-30 hidden h-lvh w-full bg-grey pt-10 md:hidden"
+      class="fixed z-30 hidden h-full w-full bg-grey pt-10 md:hidden"
       id="mobile-nav"
     >
       <div
@@ -238,7 +239,7 @@
         <div class="mx-auto max-w-[1069px]">
           <div class="grid gap-5 md:grid-flow-col">
             <div
-              class="card md:shadow-noBlurShadow md:border-dark-grey border bg-html text-dark"
+              class="card border bg-html text-dark md:border-dark-grey md:shadow-noBlurShadow"
             >
               <span class="text-40 opacity-80"
                 ><i class="fa-solid fa-code"></i
@@ -250,7 +251,7 @@
               </p>
             </div>
             <div
-              class="card md:shadow-noBlurShadow md:border-dark-grey border bg-css"
+              class="card border bg-css md:border-dark-grey md:shadow-noBlurShadow"
             >
               <span class="text-48 opacity-80"
                 ><i class="fa-solid fa-file-code"></i
@@ -262,7 +263,7 @@
               </p>
             </div>
             <div
-              class="card md:shadow-noBlurShadow md:border-dark-grey border bg-js text-dark"
+              class="card border bg-js text-dark md:border-dark-grey md:shadow-noBlurShadow"
             >
               <span class="text-48 opacity-80">
                 <i class="fa-brands fa-square-js"></i>
@@ -361,46 +362,58 @@
             welcomed, and I look forward to hearing from you!
           </p>
         </section>
-        <form class="flex flex-1 flex-col gap-2 pt-10 text-primary">
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="flex flex-1 flex-col gap-2 pt-10 text-primary"
+          id="contact-form"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="90fe272c-7e94-44b9-a9b3-8deca64e288d"
+          />
           <label class="text-18 font-semibold">Name</label>
           <input
-            class="border border-primary bg-light-violet px-2 py-3 font-thin focus:outline-none"
+            class="border border-primary bg-light-violet px-2 py-3 focus:outline-none"
             type="text"
             name="name"
             id="name"
             required
           />
-          <label class="text-18 font-semibold">Surname</label>
-          <input
-            class="border border-primary bg-light-violet px-2 py-3 font-thin focus:outline-none"
-            type="text"
-            name="surname"
-            id="surname"
-            required
-          />
           <label class="text-18 font-semibold">Email</label>
           <input
-            class="border border-primary bg-light-violet px-2 py-3 font-thin focus:outline-none"
+            class="border border-primary bg-light-violet px-2 py-3 focus:outline-none"
             type="email"
             name="email"
             id="email"
             required
           />
+          <label class="text-18 font-semibold">Subject</label>
+          <input
+            class="border border-primary bg-light-violet px-2 py-3 focus:outline-none"
+            type="text"
+            name="subject"
+            id="subject"
+            required
+          />
 
           <label class="pt-5 text-18 font-semibold">Message</label>
           <textarea
-            class="border border-primary bg-light-violet px-2 py-3 font-thin focus:outline-none"
+            class="border border-primary bg-light-violet px-2 py-3 focus:outline-none"
             name="message"
             id="message"
             cols="5"
             rows="5"
             required
           ></textarea>
-          <div class="pt-8">
-            <span class="custom-button bg-primary font-semibold text-dark"
-              >Send Message</span
-            >
-          </div>
+
+          <input
+            type="submit"
+            value="Send Message"
+            id="send-message"
+            class="custom-button mt-8 max-w-[200px] cursor-pointer bg-primary font-semibold text-dark active:scale-75"
+          />
         </form>
       </div>
 
@@ -413,12 +426,27 @@
           </p>
         </div>
         <div class="flex justify-center gap-5 pb-10 text-24 md:p-0">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-telegram"></i>
-          <i class="fa-solid fa-envelope"></i>
+          <a
+            href="https://www.facebook.com/micko.araiza.7359?mibextid=ZbWKwL"
+            target="_blank"
+            class="cursor-pointer"
+          >
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a
+            href="https://t.me/@Mko2200"
+            target="_blank"
+            class="cursor-pointer"
+          >
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+          <a href="" target="_blank" class="cursor-pointer">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
         </div>
       </div>
     </footer>
   </body>
   <script src="js/script.js"></script>
+  <script src="js/contact.js"></script>
 </html>
